@@ -25,7 +25,7 @@ Now let us see how to schedule them using cronjob
 
 **Step 5.)** To add a cronjob, command: `crontab -e`
 
-<minute hour day month weekday> /bin/sh /full/path/to/script.sh
+**Schedule a new cronjob using this format:**  minute hour day month weekday /bin/sh /full/path/to/script.sh
 
 **eg.** * * * * * /bin/sh /full/path/to/script.sh (to run CRONJOB at every minute)
 
