@@ -5,14 +5,14 @@ Scheduling sending emails using shellscript and cronjob
 
 **Step 2.)** Switch to root user and add following thing in /etc/ssmtp/ssmtp.conf:
 
-UseSTARTTLS=YES
-FromLineOverride=YES
-root=admin@example.com
-mailhub=smtp.gmail.com:587
-AuthUser=username@gmail.com
+UseSTARTTLS=YES </br>
+FromLineOverride=YES </br>
+root=admin@example.com </br>
+mailhub=smtp.gmail.com:587 </br>
+AuthUser=username@gmail.com </br>
 AuthPass=password
 
-**Step 3.)** create a shellscript file (.sh extension) eg. shellscript.sh and write this command:
+**Step 3.)** create a shellscript file (.sh extension) eg. **shellscript.sh** and write this command: </br>
  `mail -s 'subject' reciever@gmail.com < Body of email`
 
 **eg.)** mail -s 'send mail test' reciever@gmail.com < /home/username/Documents/body.txt
@@ -27,8 +27,8 @@ Now let us see how to schedule them using cronjob
 
 **Schedule a new cronjob using this format:**  minute hour day month weekday /bin/sh /full/path/to/script.sh
 
-**eg.** * * * * * /bin/sh /full/path/to/script.sh (to run CRONJOB at every minute)
+**eg.** * * * * * /bin/sh /full/path/to/shellscript.sh (to run CRONJOB at every minute)
 
-(Reference: https://linuxhint.com/setup_cron_jobs_linux/)
+(Reference: https://linuxhint.com/setup_cron_jobs_linux/  to learn more about cronjob)
 
 
