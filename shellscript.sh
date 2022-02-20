@@ -20,13 +20,14 @@ echo "5.):" >> $MYLOCATION
 echo "DISK AND MEMORY USAGE:" >> $MYLOCATION
 free -h >> $MYLOCATION
 echo "6.):" >> $MYLOCATION
-echo "CURRENT CONNEECTIONS:" >> $MYLOCATION
-ss -s >> $MYLOCATION
-echo "7.):" >> $MYLOCATION
 echo "vmstat: DETAILS ABOUT SWAP RAM" >> $MYLOCATION
 vmstat >> $MYLOCATION
-echo "8.):" >> $MYLOCATION
+echo "7.):" >> $MYLOCATION
 echo "lsmem: DETAILS ABOUT PHYSICAL RAM" >> $MYLOCATION
 lsmem >> $MYLOCATION
+echo "8.):" >> $MYLOCATION
+echo "CURRENT CONNECTIONS:" >> $MYLOCATION
+ss -s >> $MYLOCATION
+
 mail -s 'PFA System Configuration' jayant.khandelwal7@gmail.com < $MYLOCATION
 rm $MYLOCATION
