@@ -1,6 +1,8 @@
 # shellscript
 Scheduling sending emails using shellscript and cronjob 
 
+**Prerequisite:** Give "Allow less secure apps" permission from the gmail account you want to send mails. (visit: account.google.com , and then give the permission)   
+
 **Step1.)** Install smtp using `sudo apt install ssmtp`
 
 **Step 2.)** Switch to root user and add following thing in /etc/ssmtp/ssmtp.conf:
